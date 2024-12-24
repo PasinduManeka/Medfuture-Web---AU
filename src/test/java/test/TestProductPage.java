@@ -233,6 +233,7 @@ public class TestProductPage {
 	}
 	
 	//test file types are validated
+	@Test(priority=8)
 	public void testFileTypeValidation() throws InterruptedException{
 		ProductPageReachus product = new ProductPageReachus(driver, wait);
 		driver.get(url);
