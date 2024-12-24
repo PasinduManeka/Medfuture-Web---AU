@@ -232,6 +232,41 @@ public class TestProductPage {
 		Assert.assertTrue(product.isFormErrorPresent(), "CV field has not validated sa required");
 	}
 	
+	//test file types are validated
+	public void testFileTypeValidation() throws InterruptedException{
+		ProductPageReachus product = new ProductPageReachus(driver, wait);
+		driver.get(url);
+		
+		//set values
+		product.setValueInsertBox("Test", "QA", "292569333", "pasinduherath18@gmail.com");
+		
+		
+		Thread.sleep(10000);
+		
+		//drop downs
+		product.setValueCountry(0);
+		product.setValueState(0);
+		product.setValueProfession(0);
+		product.setValueSpecialty(0);
+		product.setValueSeniiority(0);
+		product.setValueRegType(0);
+		
+		//file value set
+		product.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv");
+		
+		//radio buttons
+		product.setValueTerms("click");
+		product.setValuesSubscribe("click");
+		
+		Thread.sleep(10000);
+		
+		//submit
+		product.setSubmit();		
+		Thread.sleep(40000);
+		
+		Assert.assertTrue(product.isFormErrorPresent(), "File type has not validated in upload field");
+	}
+	
 	@AfterMethod
 	public void AfterMethod() {
 		//Test
