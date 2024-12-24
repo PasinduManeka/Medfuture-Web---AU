@@ -159,6 +159,7 @@ public class CandidateRegisterObjecct {
 				serverCode = true;
 				System.out.println("Server response detected.");
 				System.out.println("Server Code:"+statusCode);
+				break;
 			}
 		}
 		
