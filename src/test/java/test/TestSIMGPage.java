@@ -197,6 +197,37 @@ public class TestSIMGPage {
 		
 	}
 	
+	//test require field validation
+	@Test(priority=6)
+	public void testRequiredFieldValidation() throws InterruptedException{
+		SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
+		driver.get(url);
+		
+		//set values
+		simg.setValueInsertBox("Test", "QA", "", "");
+		
+		
+		Thread.sleep(10000);
+		
+		//drop downs
+		simg.setValueCountry(0);
+		simg.setValueState(0);
+		simg.setValueProfession(0);
+		simg.setValueSpecialty(0);
+		simg.setValueSeniiority(0);
+		simg.setValueRegType(0);
+		
+		simg.setValuesSubscribe("click");
+	
+		Thread.sleep(10000);
+		
+		//submit
+		simg.setSubmit();		
+		Thread.sleep(40000);
+		
+		Assert.assertTrue(simg.isFormErrorPresent(), "Required fields are not validated");
+	}
+	
 	@AfterMethod
 	public void AfterMethod() {
 		//Test

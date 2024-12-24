@@ -206,6 +206,35 @@ public class TestLandingPage {
 		Thread.sleep(40000);
 	}
 	
+	@Test(priority=6)
+	public void testRequiredFieldValidation() throws InterruptedException{
+		LandingPageReachus landing = new LandingPageReachus(driver, wait);
+		driver.get(url);
+		
+		//set values
+		landing.setValueInsertBox("", "QA", "", "", "This is a test message.");
+		
+		
+		Thread.sleep(10000);
+		
+		//drop downs
+		landing.setValueProfession(0);
+		landing.setValueState(0);
+		landing.setValueSpecialty(0);
+		landing.setValueSeniiority(0);
+		
+		
+		landing.setValuesSubscribe("click");
+	
+		Thread.sleep(10000);
+		
+		//submit
+		landing.setSubmit();		
+		Thread.sleep(40000);
+		
+		Assert.assertTrue(landing.isFormErrorPresent(), "Required fields are not validated");
+	}
+	
 	
 	@AfterMethod
 	public void AfterMethod() {
