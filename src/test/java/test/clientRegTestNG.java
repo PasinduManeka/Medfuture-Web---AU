@@ -240,6 +240,31 @@ public class clientRegTestNG {
 		
 		Assert.assertTrue("Required fields are not validated", client.isFormErrorPresent());
 	}
+	
+	//test vacancy profile not required 
+	@Test(priority=9)
+	public void  testVacancyFieldRequired() throws InterruptedException{
+		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
+		driver.get(url);
+		
+		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Tes", "Test123//");
+		
+		Thread.sleep(2000);
+		client.setValueIndustryType(0);
+		client.setValuehearUs(0);
+		client.setValueTerm("click");
+		client.setValueSubscribe("click");
+		client.setValueFile("");
+		
+		//submit the form
+		client.setSubmit();
+		
+		Thread.sleep(40000);
+		
+		Assert.assertFalse("Vacancy profile is unrecognized required field.", client.isFormErrorPresent());
+	}
+	
+	
 		
 	@AfterMethod
 	public void AfterMethod() {
