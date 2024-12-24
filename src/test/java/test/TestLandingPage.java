@@ -25,6 +25,7 @@ public class TestLandingPage {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
+	private String url = "https://medfuture.com.au/profession/general-practitioner-jobs-in-australia";
 	
 	@BeforeTest
 	public void setUp() {
@@ -51,10 +52,11 @@ public class TestLandingPage {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(60));
 	}
 	
+	//test successful form submission
 	@Test(priority=1)
 	public void testSuccessfulFormSubmission() throws InterruptedException{
 		LandingPageReachus landing = new LandingPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/profession/general-practitioner-jobs-in-australia");
+		driver.get(url);
 		
 		//set values
 		landing.setValueInsertBox("Test22", "QA", "292569333", "pasinduherath18@gmail.com", "This is a test message.");
@@ -85,10 +87,11 @@ public class TestLandingPage {
 		
 	}
 	
+	//test empty form validation
 	@Test(priority=2)
 	public void testEmptyFormSubmission() throws InterruptedException{
 		LandingPageReachus landing = new LandingPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/profession/general-practitioner-jobs-in-australia");
+		driver.get(url);
 		
 		Thread.sleep(10000);
 		
@@ -100,10 +103,11 @@ public class TestLandingPage {
 		
 	}
 	
+	//test valid email validation
 	@Test(priority=3)
 	public void testValidEmail() throws InterruptedException{
 		LandingPageReachus landing = new LandingPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/profession/general-practitioner-jobs-in-australia");
+		driver.get(url);
 		
 		//set values
 		landing.setValueInsertBox("Test", "QA", "292569333", "pasinduherath", "This is a test message.");
@@ -111,7 +115,7 @@ public class TestLandingPage {
 				
 		Thread.sleep(10000);
 				
-				//drop downs
+		//drop downs
 		landing.setValueProfession(0);
 		landing.setValueState(0);
 		landing.setValueSpecialty(0);
@@ -134,10 +138,11 @@ public class TestLandingPage {
 		
 	}
 	
+	//test valid mobile validation
 	@Test(priority=4)
 	public void testValidMobile() throws InterruptedException{
 		LandingPageReachus landing = new LandingPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/profession/general-practitioner-jobs-in-australia");
+		driver.get(url);
 		
 		//set values
 		landing.setValueInsertBox("Test", "QA", "29256", "pasinduherath18@gmail.com", "This is a test message.");
@@ -167,10 +172,11 @@ public class TestLandingPage {
 		Assert.assertTrue(landing.isValidMobile(), "Mobile validation is not displaying.");
 	}
 	
+	//test valid file size validation
 	@Test(priority=5)
 	public void isValidFileSize() throws InterruptedException{
 		LandingPageReachus landing = new LandingPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/profession/general-practitioner-jobs-in-australia");
+		driver.get(url);
 		
 		//set values
 		landing.setValueInsertBox("Test", "QA", "29256", "pasinduherath18@gmail.com", "This is a test message.");

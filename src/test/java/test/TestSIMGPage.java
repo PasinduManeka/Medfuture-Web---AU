@@ -25,6 +25,7 @@ public class TestSIMGPage {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
+	private String url = "https://medfuture.com.au/international-medical-graduate-recruitment"; 
 	
 	@BeforeTest
 	public void setUp() {
@@ -51,10 +52,11 @@ public class TestSIMGPage {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(60));
 	}
 	
+	//test successful form submission
 	@Test(priority=1)
 	public void testSuccessfulFormSubmission() throws InterruptedException{
 		SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/international-medical-graduate-recruitment");
+		driver.get(url);
 		
 		//set values
 		simg.setValueInsertBox("Test", "QA", "292569333", "pasinduherath18@gmail.com");
@@ -87,11 +89,11 @@ public class TestSIMGPage {
 		
 	}
 	
-	
+	//test empty form validation
 	@Test(priority=2)
 	public void testemptyFormSubmission() throws InterruptedException{
 		SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/international-medical-graduate-recruitment");
+		driver.get(url);
 		
 		Thread.sleep(20000);
 		
@@ -103,10 +105,11 @@ public class TestSIMGPage {
 		
 	}
 	
+	//test valid email validation
 	@Test(priority=3)
 	public void testValidEmail() throws InterruptedException{
 		SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/international-medical-graduate-recruitment");
+		driver.get(url);
 		
 		//set values
 		simg.setValueInsertBox("Test", "QA", "292569333", "pasinduhera");
@@ -136,10 +139,11 @@ public class TestSIMGPage {
 		
 	}
 	
+	//test valid mobile validation
 	@Test(priority=4)
 	public void testValidMobile() throws InterruptedException{
 		SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/international-medical-graduate-recruitment");
+		driver.get(url);
 		
 		//set values
 		simg.setValueInsertBox("Test", "QA", "29256", "pasinduherath18@gmail.com");
@@ -169,11 +173,12 @@ public class TestSIMGPage {
 		
 	}
 	
+	//test valid file size validation
 	@Test(priority=5)
 	public void testValidFileSize() throws InterruptedException{
 		
 		SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
-		driver.get("https://medfuture.com.au/international-medical-graduate-recruitment");
+		driver.get(url);
 		
 		//set values
 		simg.setValueInsertBox("Test", "QA", "29256", "pasinduherath18@gmail.com");
