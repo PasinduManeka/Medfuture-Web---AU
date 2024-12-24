@@ -138,7 +138,7 @@ public class TestEmployeePage {
 	}
 	
 	//test upload file size
-	@Test(priority=1)
+	@Test(priority=5)
 	public void testFilSizeValidation() throws InterruptedException{
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
 		driver.get("https://medfuture.com.au/employer-service");
@@ -155,6 +155,25 @@ public class TestEmployeePage {
 		Assert.assertTrue("File size has not been validated.", employee.isValidFileSize());
 		
 		
+	}
+	
+	//test required field validation
+	@Test(priority=6)
+	public void testValidRequiredFields() throws InterruptedException{
+		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
+		driver.get("https://medfuture.com.au/employer-service");
+		
+		employee.setInputBoxValues("", "Company Trade", "", "https://www.test.com", "Test", "QA", "", "", "This is a test messsage");
+		
+		employee.setIndustryType(0);
+		employee.setProfession(0);
+		employee.setIndustryType(0);
+		
+		Thread.sleep(2000);
+		
+		employee.setSubmit();
+		
+		Assert.assertTrue("Required fields are not validated", employee.findErrorMsgElement());
 	}
 	
 	
