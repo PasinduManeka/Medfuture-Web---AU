@@ -53,6 +53,7 @@ public class TestNG {
 		
 	}
 	
+	//test success submission
 	@Test(priority =1)
 	public void successfulFormSubmission() throws InterruptedException{
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);

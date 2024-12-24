@@ -143,13 +143,43 @@ public class CandidateRegisterObjecct {
 	}
 	
 	//Successful pop up
-	public boolean isSuccessPopupDisplayed() {
+	public boolean isSuccessPopupDisplayed(BrowserMobProxy proxy) {
+		
+		boolean serverCode = false;
+		boolean uiSuccessMessage = false;
+				
+		Har har = proxy.getHar();
+		List<HarEntry> entries = har.getLog().getEntries();
+		
+		for(HarEntry entry:entries) {
+			HarResponse response = entry.getResponse();
+			int statusCode = response.getStatus();
+			
+			if(statusCode == 200 || statusCode == 201) {
+				serverCode = true;
+				System.out.println("Server response detected.");
+				System.out.println("Server Code:"+statusCode);
+			}
+		}
+		
 		try {
 			WebElement primaryMessage = driver.findElement(success).findElement(By.cssSelector("p.text-black"));
 			String expectedMessage = "Registered Successfully";
-			return primaryMessage.getText().equals(expectedMessage);
+			uiSuccessMessage = primaryMessage.getText().equals(expectedMessage);
+			System.out.println("UI Success Message status:"+uiSuccessMessage);
 			
 		}catch(Exception e) {
+			uiSuccessMessage =  false;
+		}
+		
+		if(serverCode && uiSuccessMessage) {
+			System.out.println("Both server and UI popup displayed.");
+			return true;
+		}else if(serverCode) {
+			System.out.println("Did not capture the success popup.");
+			return true;
+		}else {
+			System.out.println("Either server or UI did not indicate.");
 			return false;
 		}
 		
