@@ -247,6 +247,17 @@ public class ClientRegisterObject {
 	        return false; // Return false if the element is not found
 	    }
 	}
+	
+	//Validate file size
+	public boolean isValidFileSize() {
+		try {
+			WebElement errorMessageElement = driver.findElement(By.xpath("//div[contains(text(),'File size exceeds the 2 MB limit')]"));
+			System.out.println("File size is exeed");
+			return errorMessageElement.isDisplayed();
+		}catch(NoSuchElementException e){
+			return false;
+		}
+	}
 
 	
 	
