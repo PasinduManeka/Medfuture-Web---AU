@@ -201,6 +201,32 @@ public class TestEmployeePage {
 		Assert.assertFalse("Required field has been validated as required. It should not", employee.findErrorMsgElement());
 	}
 	
+	//test file type validation 
+	@Test(priority=8)
+	public void testFileTypeValidation() throws InterruptedException{
+		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
+		driver.get("https://medfuture.com.au/employer-service");
+		
+		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "+61292569333", "This is a test messsage");
+		
+		employee.setIndustryType(0);
+		employee.setProfession(0);
+		employee.setIndustryType(0);
+		
+		employee.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv");
+		
+		employee.setValueTerms("click");
+		employee.setValuesSubscribe("click");
+		
+		Thread.sleep(5000);
+		
+		employee.setSubmit();
+		
+		Thread.sleep(2000);
+		
+		Assert.assertTrue("File type has not validated in upload field", employee.findErrorMsgElement());
+	}
+	
 	
 	@AfterMethod
 	public void AfterMethod() {
