@@ -170,7 +170,7 @@ public class clientRegTestNG {
 		
 	}
 	
-	//test invalid email validationS 
+	//test invalid email validation
 	@Test(priority=6)
 	public void testValidEmail() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
@@ -264,6 +264,28 @@ public class clientRegTestNG {
 		Assert.assertFalse("Vacancy profile is unrecognized required field.", client.isFormErrorPresent());
 	}
 	
+	//test file size should not validate
+	@Test(priority=10)
+	public void testFileSize() throws InterruptedException{
+		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
+		driver.get(url);
+		
+		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Tes", "Test123//");
+		
+		Thread.sleep(2000);
+		client.setValueIndustryType(0);
+		client.setValuehearUs(0);
+		client.setValueTerm("click");
+		client.setValueSubscribe("click");
+		client.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\5-mb-example-file.pdf");
+		
+		Assert.assertFalse("Vacancy profile file size has been validated. It cannot be ", client.isValidFileSize());
+		
+		//submit the form
+		client.setSubmit();
+				
+		Thread.sleep(40000);
+	}
 	
 		
 	@AfterMethod
