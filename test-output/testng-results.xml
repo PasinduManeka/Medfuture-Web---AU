@@ -2,27 +2,27 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-24T08:55:47 IST" name="Default suite" finished-at="2024-12-24T08:56:49 IST" duration-ms="61190">
+  <suite started-at="2024-12-24T13:33:23 IST" name="Default suite" finished-at="2024-12-24T13:34:24 IST" duration-ms="61266">
     <groups>
     </groups>
-    <test started-at="2024-12-24T08:55:47 IST" name="Default test" finished-at="2024-12-24T08:56:49 IST" duration-ms="61190">
+    <test started-at="2024-12-24T13:33:23 IST" name="Default test" finished-at="2024-12-24T13:34:24 IST" duration-ms="61266">
       <class name="test.TestNG">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestNG@6200f9cb]" started-at="2024-12-24T08:55:47 IST" name="setUp" finished-at="2024-12-24T08:55:53 IST" duration-ms="5155" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestNG@2002fc1d]" started-at="2024-12-24T13:33:23 IST" name="setUp" finished-at="2024-12-24T13:33:27 IST" duration-ms="4100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="successfulFormSubmission()[pri:1, instance:test.TestNG@6200f9cb]" started-at="2024-12-24T08:55:53 IST" name="successfulFormSubmission" finished-at="2024-12-24T08:56:44 IST" duration-ms="51792" status="PASS">
+        <test-method signature="testRequiredfields()[pri:8, instance:test.TestNG@2002fc1d]" started-at="2024-12-24T13:33:27 IST" name="testRequiredfields" finished-at="2024-12-24T13:34:20 IST" duration-ms="52811" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- successfulFormSubmission -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestNG@6200f9cb]" started-at="2024-12-24T08:56:44 IST" name="tearDown" finished-at="2024-12-24T08:56:49 IST" duration-ms="4212" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@6200f9cb]" started-at="2024-12-24T08:56:44 IST" name="AfterMethod" finished-at="2024-12-24T08:56:44 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- testRequiredfields -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@2002fc1d]" started-at="2024-12-24T13:34:20 IST" name="AfterMethod" finished-at="2024-12-24T13:34:20 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestNG@2002fc1d]" started-at="2024-12-24T13:34:20 IST" name="tearDown" finished-at="2024-12-24T13:34:24 IST" duration-ms="4302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- test.TestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

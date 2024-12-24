@@ -25,6 +25,7 @@ public class TestNG {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
+	private String url = "https://medfuture.com.au/register";
 	
 	@BeforeTest
 	public void setUp() {
@@ -57,7 +58,7 @@ public class TestNG {
 	@Test(priority =1)
 	public void successfulFormSubmission() throws InterruptedException{
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
-		driver.get("https://medfuture.com.au/register");
+		driver.get(url);
 		
 		//drop downs
 		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test123//", "Test123//");
@@ -82,11 +83,11 @@ public class TestNG {
 				
 	}
 	
-	//test the empty form
+	//test the empty form validation
 	@Test(priority =2)
 	public void testEmptyFormSubmission() throws InterruptedException{
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
-		driver.get("https://medfuture.com.au/register");
+		driver.get(url);
 		
 		object.setValuesInserBox("", "", "", "", "","");
 		
@@ -106,7 +107,7 @@ public class TestNG {
 	@Test(priority =3)
 	public void testAlreadyTakenUserRegistration() throws InterruptedException{
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
-		driver.get("https://medfuture.com.au/register");
+		driver.get(url);
 		
 		//drop downs
 		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test123//", "Test123//");
@@ -139,7 +140,7 @@ public class TestNG {
 	@Test(priority = 4)	
 	public void tesPasswordLenghtError() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
-		driver.get("https://medfuture.com.au/register");
+		driver.get(url);
 		
 		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Tes", "Tes");
 
@@ -168,7 +169,7 @@ public class TestNG {
 	@Test(priority=5)	
 	public void testPasswordMismatchErrorDisplayed() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
-		driver.get("https://medfuture.com.au/register");
+		driver.get(url);
 		
 		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test1", "Test123//");
 
@@ -193,11 +194,11 @@ public class TestNG {
 		Assert.assertTrue(missMatchPassword, "Password and Confirm Password is matching.");
 	}
 	
-	//test invalid email
+	//test invalid email validation
 	@Test(priority=6)
 	public void testValidEmail() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
-		driver.get("https://medfuture.com.au/register");
+		driver.get(url);
 		
 		object.setValuesInserBox("Test666", "QA", "pasinduherat", "292569333", "Test1", "Test123//");
 
@@ -226,7 +227,7 @@ public class TestNG {
 	@Test(priority=7)
 	public void testValidFileSize() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
-		driver.get("https://medfuture.com.au/register");
+		driver.get(url);
 		
 		object.setValuesInserBox("Test666", "QA", "pasinduherat", "292569333", "Test1", "Test123//");
 
@@ -249,6 +250,36 @@ public class TestNG {
 		object.setSubmit();
 		
 		Thread.sleep(40000);		
+		
+	}
+	
+	/**test required field validation. 
+	here mainly has focus on firstname, lastname, mobile and email**/
+	@Test(priority=8)
+	public void testRequiredfields() throws InterruptedException {
+		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
+		driver.get(url);
+		
+		object.setValuesInserBox("", "", "", "", "Test1", "Test123//");
+
+		object.setValueProfession(0);
+		object.setValueSpecialty(0);
+		object.setValueCountry(12);
+		object.setValueState(0);
+		object.setValuehearUs(0);
+		object.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\5-mb-example-file.pdf");
+		
+		//radio buttons
+		object.setValueSubscribe("click");
+		object.setValueTerms("click");
+		
+		Thread.sleep(2000);
+		//Submit
+		object.setSubmit();
+		
+		Thread.sleep(40000);
+		Assert.assertTrue(object.isPasswordLengthErrorDisplayed(driver), "Required fields are not validated.");
+		
 		
 	}
 	
