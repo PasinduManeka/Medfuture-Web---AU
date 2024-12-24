@@ -50,7 +50,7 @@ public class TestContactEnquiry {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 	}
 	
-	//check success pop up 
+	//test success pop up 
 	@Test(priority=1)
 	public void successfulIsFormSubmission() throws InterruptedException{
 		EnquiryNowObject enq = new EnquiryNowObject(driver, wait);
