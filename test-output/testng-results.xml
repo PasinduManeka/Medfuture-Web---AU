@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-24T17:58:47 IST" name="Default suite" finished-at="2024-12-24T18:00:01 IST" duration-ms="74101">
+  <suite started-at="2024-12-24T18:25:19 IST" name="Default suite" finished-at="2024-12-24T18:26:34 IST" duration-ms="75012">
     <groups>
     </groups>
-    <test started-at="2024-12-24T17:58:47 IST" name="Default test" finished-at="2024-12-24T18:00:01 IST" duration-ms="74101">
+    <test started-at="2024-12-24T18:25:19 IST" name="Default test" finished-at="2024-12-24T18:26:34 IST" duration-ms="75012">
       <class name="test.TestProductPage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestProductPage@20d525]" started-at="2024-12-24T17:58:47 IST" name="setUp" finished-at="2024-12-24T17:58:50 IST" duration-ms="3316" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestProductPage@6200f9cb]" started-at="2024-12-24T18:25:19 IST" name="setUp" finished-at="2024-12-24T18:25:23 IST" duration-ms="3327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testRequirdFieldValidation()[pri:6, instance:test.TestProductPage@20d525]" started-at="2024-12-24T17:58:50 IST" name="testRequirdFieldValidation" finished-at="2024-12-24T17:59:58 IST" duration-ms="67717" status="PASS">
+        <test-method signature="testCVFieldRequired()[pri:7, instance:test.TestProductPage@6200f9cb]" started-at="2024-12-24T18:25:23 IST" name="testCVFieldRequired" finished-at="2024-12-24T18:26:31 IST" duration-ms="68666" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRequirdFieldValidation -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestProductPage@20d525]" started-at="2024-12-24T17:59:58 IST" name="AfterMethod" finished-at="2024-12-24T17:59:58 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- testCVFieldRequired -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestProductPage@6200f9cb]" started-at="2024-12-24T18:26:31 IST" name="AfterMethod" finished-at="2024-12-24T18:26:31 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestProductPage@20d525]" started-at="2024-12-24T17:59:58 IST" name="tearDown" finished-at="2024-12-24T18:00:01 IST" duration-ms="3041" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestProductPage@6200f9cb]" started-at="2024-12-24T18:26:31 IST" name="tearDown" finished-at="2024-12-24T18:26:34 IST" duration-ms="2992" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -5,9 +5,9 @@
     <classes>
       <class name="test.TestProductPage">
         <methods>
-          <include name="testRequirdFieldValidation"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="testCVFieldRequired"/>
           <include name="AfterMethod"/>
         </methods>
       </class> <!-- test.TestProductPage -->
