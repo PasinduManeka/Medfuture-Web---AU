@@ -79,6 +79,7 @@ public class TestEmployeePage {
 		Thread.sleep(10000);
 	}
 	
+	//test empty form validation
 	@Test(priority=2)
 	public void testEmptyForm() throws InterruptedException{
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
@@ -94,6 +95,7 @@ public class TestEmployeePage {
 		Thread.sleep(1000);		
 	}
 	
+	//test email validation
 	@Test(priority=3)
 	public void testValidEmail() throws InterruptedException{
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver,wait);
@@ -114,6 +116,7 @@ public class TestEmployeePage {
 		Assert.assertTrue("Invaid email validation does not display.", employee.isValidEmail());		
 	}
 	
+	//test mobile validation 
 	@Test(priority = 4)
 	public void testValidmobileNumber() throws InterruptedException{
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
@@ -134,6 +137,7 @@ public class TestEmployeePage {
 		Assert.assertTrue("Invalie mobile validation message does not display.", employee.isValidEmail());
 	}
 	
+	//test upload file size
 	@Test(priority=1)
 	public void testFilSizeValidation() throws InterruptedException{
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);

@@ -50,6 +50,7 @@ public class TestProductPage {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(60));
 	}
 	
+	//test successful form submission	
 	@Test(priority=1)
 	public void testSuccessfulFormSubmission() throws InterruptedException{
 		ProductPageReachus product = new ProductPageReachus(driver, wait);
@@ -86,7 +87,7 @@ public class TestProductPage {
 		
 	}
 	
-	
+	//test empty form validation
 	@Test(priority=2)
 	public void testemptyFormSubmission() throws InterruptedException{
 		ProductPageReachus product = new ProductPageReachus(driver, wait);
@@ -102,6 +103,7 @@ public class TestProductPage {
 		
 	}
 	
+	//test email validation
 	@Test(priority=3)
 	public void testValidEmail() throws InterruptedException{
 		ProductPageReachus product = new ProductPageReachus(driver, wait);
@@ -120,6 +122,7 @@ public class TestProductPage {
 		
 	}
 	
+	//test mobile validation
 	@Test(priority=4)
 	public void testValidMobile() throws InterruptedException{
 		ProductPageReachus product = new ProductPageReachus(driver, wait);
@@ -138,6 +141,7 @@ public class TestProductPage {
 		
 	}
 	
+	//test upload file size
 	@Test(priority=5)
 	public void testValidFileSize() throws InterruptedException{
 		
