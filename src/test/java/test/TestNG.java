@@ -82,6 +82,7 @@ public class TestNG {
 				
 	}
 	
+	//test the empty form
 	@Test(priority =2)
 	public void testEmptyFormSubmission() throws InterruptedException{
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
@@ -101,7 +102,7 @@ public class TestNG {
 
 	}
 	
-	//Test existing email validation
+	//test existing email validation
 	@Test(priority =3)
 	public void testAlreadyTakenUserRegistration() throws InterruptedException{
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
@@ -134,7 +135,7 @@ public class TestNG {
 		
 	}
 	
-	//Test password length
+	//test password length validation
 	@Test(priority = 4)	
 	public void tesPasswordLenghtError() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
@@ -163,7 +164,7 @@ public class TestNG {
 		
 	}
 	
-	//password match
+	//test password match validation
 	@Test(priority=5)	
 	public void testPasswordMismatchErrorDisplayed() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
@@ -192,7 +193,7 @@ public class TestNG {
 		Assert.assertTrue(missMatchPassword, "Password and Confirm Password is matching.");
 	}
 	
-	//invalid email
+	//test invalid email
 	@Test(priority=6)
 	public void testValidEmail() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
@@ -221,6 +222,7 @@ public class TestNG {
 		Assert.assertTrue(missMatchPassword, "Password and Confirm Password is matching.");
 	}
 	
+	//test file size validation
 	@Test(priority=7)
 	public void testValidFileSize() throws InterruptedException {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
