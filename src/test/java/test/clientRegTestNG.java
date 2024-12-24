@@ -24,6 +24,7 @@ public class clientRegTestNG {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
+	private String url = "https://medfuture.com.au/employer-register";
 	
 	@BeforeTest
 	public void setUp() {
@@ -58,7 +59,7 @@ public class clientRegTestNG {
 		System.out.println("Test the client successful popup .");
 		
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
-		driver.get("https://medfuture.com.au/employer-register");
+		driver.get(url);
 		
 		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Test123//", "Test123//");
 		
@@ -82,7 +83,7 @@ public class clientRegTestNG {
 	@Test(priority=2)
 	public void testEmptyFormSubmission() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
-		driver.get("https://medfuture.com.au/employer-register");
+		driver.get(url);
 		
 		Thread.sleep(2000);
 		
@@ -101,7 +102,7 @@ public class clientRegTestNG {
 		System.out.println("Test the client email duplication .");
 		
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
-		driver.get("https://medfuture.com.au/employer-register");
+		driver.get(url);
 		
 		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Test123//", "Test123//");
 		
@@ -125,7 +126,7 @@ public class clientRegTestNG {
 	@Test(priority=4)
 	public void testPasswordLength() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
-		driver.get("https://medfuture.com.au/employer-register");
+		driver.get(url);
 		
 		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Tes", "Test123//");
 		
@@ -149,7 +150,7 @@ public class clientRegTestNG {
 	@Test(priority=5)
 	public void testPasswordMatch() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
-		driver.get("https://medfuture.com.au/employer-register");
+		driver.get(url);
 		
 		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Test", "Test123//");
 		
@@ -173,7 +174,7 @@ public class clientRegTestNG {
 	@Test(priority=6)
 	public void testValidEmail() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
-		driver.get("https://medfuture.com.au/employer-register");
+		driver.get(url);
 		
 		client.setValues("Test", "QA", "test.com", "Test", "QA", "manekaherat815", "292569333", "Test123//", "Test123//");
 		
@@ -193,10 +194,11 @@ public class clientRegTestNG {
 		
 	}
 	
+	//test valid web site URL validation
 	@Test(priority=7)
 	public void testValidWebURL() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
-		driver.get("https://medfuture.com.au/employer-register");
+		driver.get(url);
 		
 		client.setValues("Test", "QA", "test", "Test", "QA", "manekaherat815", "292569333", "Test123//", "Test123//");
 		
@@ -216,8 +218,29 @@ public class clientRegTestNG {
 		
 	}	
 	
-	
-	
+	//test required fields validation
+	@Test(priority=8)
+	public void testRequiredFields() throws InterruptedException{
+		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
+		driver.get(url);
+		
+		client.setValues("", "", "", "Test", "QA", "", "", "Test123//", "Test123//");
+		
+		Thread.sleep(2000);
+		client.setValueIndustryType(0);
+		client.setValuehearUs(0);
+		client.setValueTerm("click");
+		client.setValueSubscribe("click");
+		client.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\1.5MB.pdf");
+		
+		//submit the form 
+		client.setSubmit();
+				
+		Thread.sleep(20000);
+		
+		Assert.assertTrue("Required fields are not validated", client.isFormErrorPresent());
+	}
+		
 	@AfterMethod
 	public void AfterMethod() {
 		System.out.println("Call the after method.");
