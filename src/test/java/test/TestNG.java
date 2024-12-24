@@ -78,8 +78,7 @@ public class TestNG {
 		object.setSubmit();
 		Thread.sleep(40000);
 		
-		boolean isPoupDisplayed = object.isSuccessPopupDisplayed();
-		Assert.assertTrue(isPoupDisplayed, "Popup Is not displayed");
+		Assert.assertTrue(object.isSuccessPopupDisplayed(proxy), "Candidate register form is not ubmitted.");
 				
 	}
 	
