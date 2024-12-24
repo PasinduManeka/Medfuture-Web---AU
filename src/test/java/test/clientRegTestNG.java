@@ -50,7 +50,7 @@ public class clientRegTestNG {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 	}
 	
-	//success
+	//test success submission
 	
 	@Test(priority = 1)
 	public void successfulFormSubmission() throws InterruptedException{
@@ -78,7 +78,7 @@ public class clientRegTestNG {
 		
 	}
 	
-	//check empty form
+	//test empty form submission
 	@Test(priority=2)
 	public void testEmptyFormSubmission() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
@@ -94,7 +94,7 @@ public class clientRegTestNG {
 		
 	}
 	
-	//Test existing mail validation.
+	//test existing mail validation.
 	@Test(priority=3)
 	public void testExistEmailValidation() throws InterruptedException{
 		
@@ -145,7 +145,7 @@ public class clientRegTestNG {
 		
 	}
 	
-	//Test Confirm Password and Password values are same.
+	//test confirm password and password values are match validation.
 	@Test(priority=5)
 	public void testPasswordMatch() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
@@ -169,6 +169,7 @@ public class clientRegTestNG {
 		
 	}
 	
+	//test invalid email validationS 
 	@Test(priority=6)
 	public void testValidEmail() throws InterruptedException{
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
