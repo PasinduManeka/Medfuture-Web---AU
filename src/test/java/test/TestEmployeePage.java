@@ -176,6 +176,31 @@ public class TestEmployeePage {
 		Assert.assertTrue("Required fields are not validated", employee.findErrorMsgElement());
 	}
 	
+	//test vacancy profile field required
+	@Test(priority=7)
+	public void  testVacancyProfileReqiredValidate() throws InterruptedException{
+		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
+		driver.get("https://medfuture.com.au/employer-service");
+		
+		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "+61292569333", "This is a test messsage");
+		
+		employee.setIndustryType(0);
+		employee.setProfession(0);
+		employee.setIndustryType(0);
+		
+		
+		employee.setValueTerms("click");
+		employee.setValuesSubscribe("click");
+		
+		Thread.sleep(5000);
+		
+		employee.setSubmit();
+		
+		Thread.sleep(2000);
+		
+		Assert.assertFalse("Required field has been validated as required. It should not", employee.findErrorMsgElement());
+	}
+	
 	
 	@AfterMethod
 	public void AfterMethod() {
