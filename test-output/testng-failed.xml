@@ -3,29 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestSIMGPage">
-        <methods>
-          <include name="AfterMethod"/>
-          <include name="tearDown"/>
-          <include name="testValidFileSize"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- test.TestSIMGPage -->
-      <class name="test.TestEmployeePage">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="testFilSizeValidation"/>
-          <include name="testValidmobileNumber"/>
-          <include name="AfterMethod"/>
-          <include name="testSuccessfulFormSubmission"/>
-        </methods>
-      </class> <!-- test.TestEmployeePage -->
       <class name="test.TestProductPage">
         <methods>
+          <include name="testRequirdFieldValidation"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testValidFileSize"/>
           <include name="AfterMethod"/>
         </methods>
       </class> <!-- test.TestProductPage -->
