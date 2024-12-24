@@ -267,7 +267,7 @@ public class TestNG {
 		object.setValueCountry(12);
 		object.setValueState(0);
 		object.setValuehearUs(0);
-		object.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\5-mb-example-file.pdf");
+		object.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\1.5MB.pdf");
 		
 		//radio buttons
 		object.setValueSubscribe("click");
@@ -280,7 +280,34 @@ public class TestNG {
 		Thread.sleep(40000);
 		Assert.assertTrue(object.isPasswordLengthErrorDisplayed(driver), "Required fields are not validated.");
 		
+	}
+	
+	//test CV field required validation
+	@Test(priority=9)
+	public void testRequiredCVField() throws InterruptedException {
+		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
+		driver.get(url);
 		
+		//drop downs
+		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test123//", "Test123//");
+
+		object.setValueProfession(0);
+		object.setValueSpecialty(0);
+		object.setValueCountry(12);
+		object.setValueState(0);
+		object.setValuehearUs(0);
+		object.setValueFile("");
+		
+		//radio buttons
+		object.setValueSubscribe("click");
+		object.setValueTerms("click");
+		
+		Thread.sleep(2000);
+		//Submit
+		object.setSubmit();
+		Thread.sleep(40000);
+		
+		Assert.assertTrue(object.isFormErrorPresent(), "CV field has not validate as required field");
 	}
 	
 	
