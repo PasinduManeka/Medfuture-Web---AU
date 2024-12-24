@@ -51,6 +51,7 @@ public class TestEmployeePage {
 		
 	}
 	
+	//successful form submission
 	@Test(priority=1)
 	public void testSuccessfulFormSubmission() throws InterruptedException{
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
