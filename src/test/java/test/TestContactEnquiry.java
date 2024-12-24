@@ -67,7 +67,7 @@ public class TestContactEnquiry {
 		Assert.assertTrue("Successful Poup is not displayed", enq.isSuccessPopupDisplayed());
 	}
 	
-	//Check required fields
+	//test required fields
 	@Test(priority=2)
 	public void testEmptyForm() throws InterruptedException{
 		EnquiryNowObject enq = new EnquiryNowObject(driver, wait);
@@ -80,7 +80,7 @@ public class TestContactEnquiry {
 		Assert.assertTrue("Required fields are filled.", enq.isEmptyForm());
 	}
 	
-	//Check valid mobile
+	//test valid mobile
 	@Test(priority=3)
 	public void testValidMobileNum() throws InterruptedException{
 		EnquiryNowObject enq = new EnquiryNowObject(driver, wait);
@@ -98,7 +98,7 @@ public class TestContactEnquiry {
 		
 	}
 	
-	//Test invalid email
+	//test invalid email
 	@Test(priority = 4)
 	public void testValidEmail() throws InterruptedException{
 		EnquiryNowObject enq = new EnquiryNowObject(driver, wait);
