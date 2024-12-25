@@ -310,6 +310,36 @@ public class TestNG {
 		Assert.assertTrue(object.isFormErrorPresent(), "CV field has not validate as required field");
 	}
 	
+	//test file type validation
+		@Test(priority=10)
+		public void testFileTypeValidation() throws InterruptedException {
+			CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
+			driver.get(url);
+			
+			object.setValuesInserBox("Test666", "QA", "pasinduherat", "292569333", "Test1", "Test123//");
+
+			object.setValueProfession(0);
+			object.setValueSpecialty(0);
+			object.setValueCountry(12);
+			object.setValueState(0);
+			object.setValuehearUs(0);
+			object.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv");
+			
+			//radio buttons
+			object.setValueSubscribe("click");
+			object.setValueTerms("click");
+			
+			Thread.sleep(2000);
+			
+			Assert.assertTrue(object.isFormErrorPresent(),"File type is not validated");
+			
+			//Submit
+			object.setSubmit();
+			
+			Thread.sleep(40000);		
+			
+		}
+	
 	
 	@AfterMethod
 	public void AfterMethod() {

@@ -287,6 +287,29 @@ public class clientRegTestNG {
 		Thread.sleep(40000);
 	}
 	
+	//test file type validation
+		@Test(priority=11)
+		public void testFileTypeValidation() throws InterruptedException{
+			ClientRegisterObject client = new ClientRegisterObject(driver, wait);
+			driver.get(url);
+			
+			client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Tes", "Test123//");
+			
+			Thread.sleep(2000);
+			client.setValueIndustryType(0);
+			client.setValuehearUs(0);
+			client.setValueTerm("click");
+			client.setValueSubscribe("click");
+			client.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv");
+			
+			//submit the form
+			client.setSubmit();
+					
+			Thread.sleep(40000);
+			
+			Assert.assertTrue("File type is noot validated", client.isFormErrorPresent());
+		}
+	
 		
 	@AfterMethod
 	public void AfterMethod() {
