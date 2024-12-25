@@ -267,6 +267,41 @@ public class TestLandingPage {
 		Assert.assertTrue(landing.isFormErrorPresent(), "CV field is not validated as required");
 	}
 	
+	//test upload file type validation
+		@Test(priority=8)
+		public void testFileTypeValidation() throws InterruptedException{
+			LandingPageReachus landing = new LandingPageReachus(driver, wait);
+			driver.get(url);
+			
+			//set values
+			landing.setValueInsertBox("Test22", "QA", "292569333", "pasinduherath18@gmail.com", "This is a test message.");
+			
+			
+			Thread.sleep(10000);
+			
+			//drop downs
+			landing.setValueProfession(0);
+			landing.setValueState(0);
+			landing.setValueSpecialty(0);
+			landing.setValueSeniiority(0);
+			
+			//file value set
+			landing.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\1.5MB.pdf");
+			
+			
+			//radio buttons
+			landing.setValueTerms("click");
+			landing.setValuesSubscribe("click");
+		
+			Thread.sleep(10000);
+			
+			//submit
+			landing.setSubmit();		
+			Thread.sleep(40000);
+			
+			Assert.assertTrue(landing.isFormErrorPresent(), "File type validation is not validated");
+		}
+	
 	@AfterMethod
 	public void AfterMethod() {
 		//Test

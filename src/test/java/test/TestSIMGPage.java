@@ -247,7 +247,7 @@ public class TestSIMGPage {
 		simg.setValueSpecialty(0);
 		simg.setValueSeniiority(0);
 		simg.setValueRegType(0);
-		
+				
 		//radio buttons
 		simg.setValueTerms("click");
 		simg.setValuesSubscribe("click");
@@ -260,6 +260,43 @@ public class TestSIMGPage {
 		
 		Assert.assertTrue(simg.isFormErrorPresent(), "CV field is not validated as required");
 	}
+	
+	//test upload file type validation
+		@Test(priority=8)
+		public void testFileTypeValidation() throws InterruptedException{
+			SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
+			driver.get(url);
+			
+			//set values
+			simg.setValueInsertBox("Test", "QA", "292569333", "pasinduherath18@gmail.com");
+			
+			
+			Thread.sleep(10000);
+			
+			//drop downs
+			simg.setValueCountry(0);
+			simg.setValueState(0);
+			simg.setValueProfession(0);
+			simg.setValueSpecialty(0);
+			simg.setValueSeniiority(0);
+			simg.setValueRegType(0);
+			
+			//file value set
+			simg.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv");
+			
+			
+			//radio buttons
+			simg.setValueTerms("click");
+			simg.setValuesSubscribe("click");
+		
+			Thread.sleep(10000);
+			
+			//submit
+			simg.setSubmit();		
+			Thread.sleep(40000);
+			
+			Assert.assertTrue(simg.isFormErrorPresent(), "File type validation is not validated.");
+		}
 	
 	@AfterMethod
 	public void AfterMethod() {
