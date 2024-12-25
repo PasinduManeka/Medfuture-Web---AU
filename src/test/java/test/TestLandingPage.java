@@ -206,6 +206,7 @@ public class TestLandingPage {
 		Thread.sleep(40000);
 	}
 	
+	//test required field validation
 	@Test(priority=6)
 	public void testRequiredFieldValidation() throws InterruptedException{
 		LandingPageReachus landing = new LandingPageReachus(driver, wait);
