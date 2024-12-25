@@ -228,6 +228,39 @@ public class TestSIMGPage {
 		Assert.assertTrue(simg.isFormErrorPresent(), "Required fields are not validated");
 	}
 	
+	//test upload file required validation
+	@Test(priority=7)
+	public void testCVFieldRequiredValidation() throws InterruptedException{
+		SIMGPageReachus simg = new SIMGPageReachus(driver, wait);
+		driver.get(url);
+		
+		//set values
+		simg.setValueInsertBox("Test", "QA", "292569333", "pasinduherath18@gmail.com");
+		
+		
+		Thread.sleep(10000);
+		
+		//drop downs
+		simg.setValueCountry(0);
+		simg.setValueState(0);
+		simg.setValueProfession(0);
+		simg.setValueSpecialty(0);
+		simg.setValueSeniiority(0);
+		simg.setValueRegType(0);
+		
+		//radio buttons
+		simg.setValueTerms("click");
+		simg.setValuesSubscribe("click");
+	
+		Thread.sleep(10000);
+		
+		//submit
+		simg.setSubmit();		
+		Thread.sleep(40000);
+		
+		Assert.assertTrue(simg.isFormErrorPresent(), "CV field is not validated as required");
+	}
+	
 	@AfterMethod
 	public void AfterMethod() {
 		//Test

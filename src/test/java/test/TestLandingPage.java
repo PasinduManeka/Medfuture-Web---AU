@@ -236,6 +236,36 @@ public class TestLandingPage {
 		Assert.assertTrue(landing.isFormErrorPresent(), "Required fields are not validated");
 	}
 	
+	//test upload file required validation
+	@Test(priority=7)
+	public void testCVFieldRequiredValidation() throws InterruptedException{
+		LandingPageReachus landing = new LandingPageReachus(driver, wait);
+		driver.get(url);
+		
+		//set values
+		landing.setValueInsertBox("Test22", "QA", "292569333", "pasinduherath18@gmail.com", "This is a test message.");
+		
+		
+		Thread.sleep(10000);
+		
+		//drop downs
+		landing.setValueProfession(0);
+		landing.setValueState(0);
+		landing.setValueSpecialty(0);
+		landing.setValueSeniiority(0);
+		
+		//radio buttons
+		landing.setValueTerms("click");
+		landing.setValuesSubscribe("click");
+	
+		Thread.sleep(10000);
+		
+		//submit
+		landing.setSubmit();		
+		Thread.sleep(40000);
+		
+		Assert.assertTrue(landing.isFormErrorPresent(), "CV field is not validated as required");
+	}
 	
 	@AfterMethod
 	public void AfterMethod() {
