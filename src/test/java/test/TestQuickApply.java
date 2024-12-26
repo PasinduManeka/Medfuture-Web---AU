@@ -53,6 +53,7 @@ public class TestQuickApply {
 		
 	}
 	
+	//test success form submission
 	@Test(priority =1)
 	public void successfulFormSubmission() throws InterruptedException{
 		QuickApplyObject apply = new QuickApplyObject(driver, wait);
@@ -83,6 +84,7 @@ public class TestQuickApply {
 				
 	}
 	
+	//test empty form submission
 	@Test(priority=2)
 	public void testEmptyFormSubmission() throws InterruptedException{
 		QuickApplyObject apply = new QuickApplyObject(driver, wait);
@@ -98,6 +100,7 @@ public class TestQuickApply {
 
 	}
 	
+	//test valid email validation
 	@Test(priority=3)
 	public void testEmailValidations() throws InterruptedException {
 		QuickApplyObject apply = new QuickApplyObject(driver, wait);
@@ -127,6 +130,7 @@ public class TestQuickApply {
 		Assert.assertTrue(apply.isValidMail(), "It's a valid email.");
 	}
 	
+	//test valid mobile validation
 	@Test(priority=4)
 	public void testMobileValidation() throws InterruptedException{
 		QuickApplyObject apply = new QuickApplyObject(driver, wait);
