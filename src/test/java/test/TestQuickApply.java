@@ -160,6 +160,66 @@ public class TestQuickApply {
 		Assert.assertTrue(apply.isValidMobile(), "It's valid mobile number.");
 	}
 	
+	//test required field validation
+	@Test(priority=5)
+	public void testRequiredFieldValidation() throws InterruptedException{
+		QuickApplyObject apply = new QuickApplyObject(driver, wait);
+		driver.get(url);
+		
+		//set values on input box
+		apply.SetValues("Test", "QA", "", "", "This is a test message.");
+		
+		Thread.sleep(10000);
+		
+		//set values on drop downs
+		apply.setValueState(0);
+		apply.setValueSeniority(0);
+		apply.setValueSpecilaty(0);
+		apply.setValueSubscribe("click");
+		//apply.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\1.5MB.pdf");
+		apply.setValuehearUs(0);
+		
+		apply.setValueSubscribe("click");
+		
+		Thread.sleep(1000);
+		
+		apply.setSubmit();
+		
+		Thread.sleep(20000);
+		
+		Assert.assertTrue(apply.isFormErrorPresent(), "Required validation are not validated");;
+	}
+	
+	//test CV required validation
+	@Test(priority=6)
+	public void  testCVFieldValidation() throws InterruptedException{
+		QuickApplyObject apply = new QuickApplyObject(driver, wait);
+		driver.get(url);
+		
+		//set values on input box
+		apply.SetValues("Test", "QA", "292569333", "pasinduherath18@gmail.com", "This is a test message.");
+		
+		Thread.sleep(10000);
+		
+		//set values on drop downs
+		apply.setValueState(0);
+		apply.setValueSeniority(0);
+		apply.setValueSpecilaty(0);
+		apply.setValueSubscribe("click");
+		//apply.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\1.5MB.pdf");
+		apply.setValuehearUs(0);
+		
+		apply.setValueSubscribe("click");
+		
+		Thread.sleep(1000);
+		
+		apply.setSubmit();
+		
+		Thread.sleep(20000);
+		
+		Assert.assertTrue(apply.isFormErrorPresent(), "CV required field validation are not validated");
+	}
+	
 	
 	
 	@AfterMethod
