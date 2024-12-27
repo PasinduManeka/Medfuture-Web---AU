@@ -24,7 +24,7 @@ public class clientRegTestNG {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
-	private String url = "https://medfuture.com.au/employer-register";
+	private String url = "https://medfuture.co.nz/employer-register";
 	
 	@BeforeTest
 	public void setUp() {
@@ -52,7 +52,6 @@ public class clientRegTestNG {
 	}
 	
 	//test success submission
-	
 	@Test(priority = 1)
 	public void successfulFormSubmission() throws InterruptedException{
 		
