@@ -57,11 +57,11 @@ public class TestEmployeePage {
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
 		driver.get("https://medfuture.com.au/employer-service");
 		
-		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "+61292569333", "This is a test messsage");
+		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "This is a test messsage.");
 		
 		employee.setIndustryType(0);
 		employee.setProfession(0);
-		employee.setIndustryType(0);
+		employee.setPlacementType(0);
 		
 		employee.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\1.5MB.pdf");
 		
@@ -72,7 +72,7 @@ public class TestEmployeePage {
 		
 		employee.setSubmit();
 		
-		Thread.sleep(2000);
+		Thread.sleep(20000);
 		
 		Assert.assertTrue("Popup is not displayed.", employee.findSuccessfulPopup());
 	
@@ -101,7 +101,7 @@ public class TestEmployeePage {
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver,wait);
 		driver.get("https://medfuture.com.au/employer-service");
 		
-		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaher", "+61292569333", "This is a test messsage");
+		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaher", "292569333", "This is a test messsage");
 		
 		employee.setIndustryType(0);
 		employee.setProfession(0);
@@ -122,7 +122,7 @@ public class TestEmployeePage {
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
 		driver.get("https://medfuture.com.au/employer-service");
 		
-		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "+6129", "This is a test messsage");
+		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "295586", "This is a test messsage");
 		
 		employee.setIndustryType(0);
 		employee.setProfession(0);
@@ -143,7 +143,7 @@ public class TestEmployeePage {
 		EmployeePagereachUs employee = new EmployeePagereachUs(driver, wait);
 		driver.get("https://medfuture.com.au/employer-service");
 		
-		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "+61292569333", "This is a test messsage");
+		employee.setInputBoxValues("Company123", "Company Trade", "456321", "https://www.test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "This is a test messsage");
 		
 		employee.setIndustryType(0);
 		employee.setProfession(0);
