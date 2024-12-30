@@ -1,29 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-25T04:27:37 IST" name="Default suite" finished-at="2024-12-25T04:27:54 IST" duration-ms="16771">
+  <suite started-at="2024-12-30T09:29:38 IST" name="Default suite" finished-at="2024-12-30T09:36:59 IST" duration-ms="440836">
     <groups>
     </groups>
-    <test started-at="2024-12-25T04:27:37 IST" name="Default test" finished-at="2024-12-25T04:27:54 IST" duration-ms="16771">
-      <class name="test.TestEmployeePage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestEmployeePage@20d525]" started-at="2024-12-25T04:27:37 IST" name="setUp" finished-at="2024-12-25T04:27:42 IST" duration-ms="4251" status="PASS">
+    <test started-at="2024-12-30T09:29:38 IST" name="Default test" finished-at="2024-12-30T09:36:59 IST" duration-ms="440836">
+      <class name="test.TestNG">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:29:38 IST" name="setUp" finished-at="2024-12-30T09:29:43 IST" duration-ms="4381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidRequiredFields()[pri:6, instance:test.TestEmployeePage@20d525]" started-at="2024-12-25T04:27:42 IST" name="testValidRequiredFields" finished-at="2024-12-25T04:27:51 IST" duration-ms="9545" status="PASS">
+        <test-method signature="successfulFormSubmission()[pri:1, instance:test.TestNG@20d525]" started-at="2024-12-30T09:29:43 IST" name="successfulFormSubmission" finished-at="2024-12-30T09:30:33 IST" duration-ms="50713" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidRequiredFields -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestEmployeePage@20d525]" started-at="2024-12-25T04:27:51 IST" name="AfterMethod" finished-at="2024-12-25T04:27:51 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- successfulFormSubmission -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:30:33 IST" name="AfterMethod" finished-at="2024-12-30T09:30:33 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestEmployeePage@20d525]" started-at="2024-12-25T04:27:51 IST" name="tearDown" finished-at="2024-12-25T04:27:54 IST" duration-ms="2948" status="PASS">
+        <test-method signature="testEmptyFormSubmission()[pri:2, instance:test.TestNG@20d525]" started-at="2024-12-30T09:30:33 IST" name="testEmptyFormSubmission" finished-at="2024-12-30T09:31:17 IST" duration-ms="43097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyFormSubmission -->
+        <test-method signature="testAlreadyTakenUserRegistration()[pri:3, instance:test.TestNG@20d525]" started-at="2024-12-30T09:31:17 IST" name="testAlreadyTakenUserRegistration" finished-at="2024-12-30T09:32:04 IST" duration-ms="47580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAlreadyTakenUserRegistration -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:31:17 IST" name="AfterMethod" finished-at="2024-12-30T09:31:17 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:04 IST" name="AfterMethod" finished-at="2024-12-30T09:32:04 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="tesPasswordLenghtError()[pri:4, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:04 IST" name="tesPasswordLenghtError" finished-at="2024-12-30T09:32:51 IST" duration-ms="46900" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tesPasswordLenghtError -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:51 IST" name="AfterMethod" finished-at="2024-12-30T09:32:51 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="testPasswordMismatchErrorDisplayed()[pri:5, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:51 IST" name="testPasswordMismatchErrorDisplayed" finished-at="2024-12-30T09:33:40 IST" duration-ms="49061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordMismatchErrorDisplayed -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:33:40 IST" name="AfterMethod" finished-at="2024-12-30T09:33:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="testValidEmail()[pri:6, instance:test.TestNG@20d525]" started-at="2024-12-30T09:33:40 IST" name="testValidEmail" finished-at="2024-12-30T09:34:29 IST" duration-ms="48647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidEmail -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:34:29 IST" name="AfterMethod" finished-at="2024-12-30T09:34:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="testValidFileSize()[pri:7, instance:test.TestNG@20d525]" started-at="2024-12-30T09:34:29 IST" name="testValidFileSize" finished-at="2024-12-30T09:35:16 IST" duration-ms="47009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidFileSize -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:35:16 IST" name="AfterMethod" finished-at="2024-12-30T09:35:16 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="testRequiredfields()[pri:8, instance:test.TestNG@20d525]" started-at="2024-12-30T09:35:16 IST" name="testRequiredfields" finished-at="2024-12-30T09:36:03 IST" duration-ms="47275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRequiredfields -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:03 IST" name="AfterMethod" finished-at="2024-12-30T09:36:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="testRequiredCVField()[pri:9, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:03 IST" name="testRequiredCVField" finished-at="2024-12-30T09:36:09 IST" duration-ms="5612" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidArgumentException">
+            <message>
+              <![CDATA[File not found: 
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [79812e47-71c0-47c2-be39-82eecda80d4d, sendKeysToElement {value=[Ljava.lang.CharSequence;@16f15ae9, id=50074b90-fd05-4fc8-bbe7-2129b503cad8}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:39564, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85324, moz:profile: C:\Users\QACODE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=desktop-..., se:cdp: ws://127.0.0.1:39564/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (79812e47-71c0-47c2-be39-82eecda80d4d)] -> id: fileUpload]
+Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidArgumentException: File not found: 
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [79812e47-71c0-47c2-be39-82eecda80d4d, sendKeysToElement {value=[Ljava.lang.CharSequence;@16f15ae9, id=50074b90-fd05-4fc8-bbe7-2129b503cad8}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:39564, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85324, moz:profile: C:\Users\QACODE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=desktop-..., se:cdp: ws://127.0.0.1:39564/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (79812e47-71c0-47c2-be39-82eecda80d4d)] -> id: fileUpload]
+Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at Pages.CandidateRegisterObjecct.setValueFile(CandidateRegisterObjecct.java:138)
+at test.TestNG.testRequiredCVField(TestNG.java:299)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRequiredCVField -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:09 IST" name="AfterMethod" finished-at="2024-12-30T09:36:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="testFileTypeValidation()[pri:10, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:09 IST" name="testFileTypeValidation" finished-at="2024-12-30T09:36:57 IST" duration-ms="47832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFileTypeValidation -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:57 IST" name="AfterMethod" finished-at="2024-12-30T09:36:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:57 IST" name="tearDown" finished-at="2024-12-30T09:36:59 IST" duration-ms="2672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.TestEmployeePage -->
+      </class> <!-- test.TestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
