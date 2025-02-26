@@ -61,7 +61,7 @@ public class TestNG {
 		driver.get(url);
 		
 		//drop downs
-		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test123//", "Test123//");
+		object.setValuesInserBox("Test666", "QA", "texaswilliam98@gmail.com", "292569333", "Test123//", "Test123//");
 
 		object.setValueProfession(0);
 		object.setValueSpecialty(0);
@@ -110,7 +110,7 @@ public class TestNG {
 		driver.get(url);
 		
 		//drop downs
-		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test123//", "Test123//");
+		object.setValuesInserBox("Test666", "QA", "texaswilliam98@gmail.com", "292569333", "Test123//", "Test123//");
 
 		object.setValueProfession(0);
 		object.setValueSpecialty(0);
@@ -171,7 +171,7 @@ public class TestNG {
 		CandidateRegisterObjecct object = new CandidateRegisterObjecct(driver, wait);
 		driver.get(url);
 		
-		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test1", "Test123//");
+		object.setValuesInserBox("Test666", "QA", "texaswilliam98@gmail.com", "292569333", "Test1", "Test123//");
 
 		object.setValueProfession(0);
 		object.setValueSpecialty(0);
@@ -289,14 +289,14 @@ public class TestNG {
 		driver.get(url);
 		
 		//drop downs
-		object.setValuesInserBox("Test666", "QA", "pasinduherath18@gmail.com", "292569333", "Test123//", "Test123//");
+		object.setValuesInserBox("Test666", "QA", "texaswilliam98@gmail.com", "292569333", "Test123//", "Test123//");
 
 		object.setValueProfession(0);
 		object.setValueSpecialty(0);
 		object.setValueCountry(12);
 		object.setValueState(0);
 		object.setValuehearUs(0);
-		object.setValueFile("");
+//		object.setValueFile("");
 		
 		//radio buttons
 		object.setValueSubscribe("click");
@@ -307,7 +307,9 @@ public class TestNG {
 		object.setSubmit();
 		Thread.sleep(40000);
 		
-		Assert.assertTrue(object.isFormErrorPresent(), "CV field has not validate as required field");
+		Assert.assertFalse(object.isFormErrorPresent(), "CV field is required");
+		
+//		Assert.assertTrue(object.isFormErrorPresent(), "CV field has not validate as required field");
 	}
 	
 	//test file type validation

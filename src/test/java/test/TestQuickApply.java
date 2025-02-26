@@ -25,7 +25,7 @@ public class TestQuickApply {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
-	private String url="https://medfuture.com.au/apply-now/permanent/general-practitioner-aged-care-aud-180-per-hour-dpa-mmm-2-ballarat/24395";
+	private String url="https://medfuture.com.au/apply-now/permanent/occupational-therapist-aud-90000-per-annum-boronia/25238";
 	@BeforeTest
 	public void setUp() {
 		
@@ -60,7 +60,7 @@ public class TestQuickApply {
 		driver.get(url);
 		
 		//set values on input box
-		apply.SetValues("Test", "QA", "292569333", "pasinduherath18@gmail.com", "This is a test message.");
+		apply.SetValues("Test", "QA", "292569333", "pasindu@thecodedesk.com", "This is a test message.");
 		
 		Thread.sleep(10000);
 		

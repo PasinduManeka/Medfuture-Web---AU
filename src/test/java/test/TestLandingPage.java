@@ -286,7 +286,7 @@ public class TestLandingPage {
 			landing.setValueSeniiority(0);
 			
 			//file value set
-			landing.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\1.5MB.pdf");
+			landing.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\annual-enterprise-survey-2023-financial-year-provisional-size-bands.csv");
 			
 			
 			//radio buttons

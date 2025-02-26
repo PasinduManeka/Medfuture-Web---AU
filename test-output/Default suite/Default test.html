@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 30 09:29:38 IST 2024</td>
+<td>Started on:</td><td>Wed Feb 26 08:31:57 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>440 seconds (440836 ms)</td>
+<tr><td>Total time:</td><td>402 seconds (402088 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,29 +76,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.TestNG.testRequiredCVField()'><b>testRequiredCVField</b><br>Test class: test.TestNG</td>
-<td><div><pre>org.openqa.selenium.InvalidArgumentException: File not found: 
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [79812e47-71c0-47c2-be39-82eecda80d4d, sendKeysToElement {value=[Ljava.lang.CharSequence;@16f15ae9, id=50074b90-fd05-4fc8-bbe7-2129b503cad8}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:39564, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85324, moz:profile: C:\Users\QACODE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=desktop-..., se:cdp: ws://127.0.0.1:39564/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (79812e47-71c0-47c2-be39-82eecda80d4d)] -&gt; id: fileUpload]
-Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at Pages.CandidateRegisterObjecct.setValueFile(CandidateRegisterObjecct.java:138)
-	at test.TestNG.testRequiredCVField(TestNG.java:299)
+<td title='test.TestSIMGPage.testValidFileSize()'><b>testValidFileSize</b><br>Test class: test.TestSIMGPage</td>
+<td><div><pre>java.lang.AssertionError: Invalid file size does not detect. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at test.TestSIMGPage.testValidFileSize(TestSIMGPage.java:194)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -125,29 +108,12 @@ Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1561651614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1561651614'><pre>org.openqa.selenium.InvalidArgumentException: File not found: 
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [79812e47-71c0-47c2-be39-82eecda80d4d, sendKeysToElement {value=[Ljava.lang.CharSequence;@16f15ae9, id=50074b90-fd05-4fc8-bbe7-2129b503cad8}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:39564, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85324, moz:profile: C:\Users\QACODE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=desktop-..., se:cdp: ws://127.0.0.1:39564/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (79812e47-71c0-47c2-be39-82eecda80d4d)] -&gt; id: fileUpload]
-Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at Pages.CandidateRegisterObjecct.setValueFile(CandidateRegisterObjecct.java:138)
-	at test.TestNG.testRequiredCVField(TestNG.java:299)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1899280551", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1899280551'><pre>java.lang.AssertionError: Invalid file size does not detect. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at test.TestSIMGPage.testValidFileSize(TestSIMGPage.java:194)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -175,8 +141,8 @@ Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>5</td>
-<td>test.TestNG@20d525</td></tr>
+<td>9</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -187,50 +153,40 @@ Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.TestNG.testAlreadyTakenUserRegistration()'><b>testAlreadyTakenUserRegistration</b><br>Test class: test.TestNG</td>
+<td title='test.TestSIMGPage.testemptyFormSubmission()'><b>testemptyFormSubmission</b><br>Test class: test.TestSIMGPage</td>
 <td></td>
-<td>47</td>
-<td>test.TestNG@20d525</td></tr>
+<td>31</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 <tr>
-<td title='test.TestNG.testValidEmail()'><b>testValidEmail</b><br>Test class: test.TestNG</td>
+<td title='test.TestSIMGPage.testValidEmail()'><b>testValidEmail</b><br>Test class: test.TestSIMGPage</td>
 <td></td>
-<td>48</td>
-<td>test.TestNG@20d525</td></tr>
+<td>40</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 <tr>
-<td title='test.TestNG.successfulFormSubmission()'><b>successfulFormSubmission</b><br>Test class: test.TestNG</td>
+<td title='test.TestSIMGPage.testFileTypeValidation()'><b>testFileTypeValidation</b><br>Test class: test.TestSIMGPage</td>
 <td></td>
-<td>50</td>
-<td>test.TestNG@20d525</td></tr>
+<td>68</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 <tr>
-<td title='test.TestNG.testValidFileSize()'><b>testValidFileSize</b><br>Test class: test.TestNG</td>
+<td title='test.TestSIMGPage.testValidMobile()'><b>testValidMobile</b><br>Test class: test.TestSIMGPage</td>
 <td></td>
-<td>47</td>
-<td>test.TestNG@20d525</td></tr>
+<td>39</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 <tr>
-<td title='test.TestNG.tesPasswordLenghtError()'><b>tesPasswordLenghtError</b><br>Test class: test.TestNG</td>
+<td title='test.TestSIMGPage.testRequiredFieldValidation()'><b>testRequiredFieldValidation</b><br>Test class: test.TestSIMGPage</td>
 <td></td>
-<td>46</td>
-<td>test.TestNG@20d525</td></tr>
+<td>67</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 <tr>
-<td title='test.TestNG.testPasswordMismatchErrorDisplayed()'><b>testPasswordMismatchErrorDisplayed</b><br>Test class: test.TestNG</td>
+<td title='test.TestSIMGPage.testCVFieldRequiredValidation()'><b>testCVFieldRequiredValidation</b><br>Test class: test.TestSIMGPage</td>
 <td></td>
-<td>49</td>
-<td>test.TestNG@20d525</td></tr>
+<td>67</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 <tr>
-<td title='test.TestNG.testFileTypeValidation()'><b>testFileTypeValidation</b><br>Test class: test.TestNG</td>
+<td title='test.TestSIMGPage.testSuccessfulFormSubmission()'><b>testSuccessfulFormSubmission</b><br>Test class: test.TestSIMGPage</td>
 <td></td>
-<td>47</td>
-<td>test.TestNG@20d525</td></tr>
-<tr>
-<td title='test.TestNG.testRequiredfields()'><b>testRequiredfields</b><br>Test class: test.TestNG</td>
-<td></td>
-<td>47</td>
-<td>test.TestNG@20d525</td></tr>
-<tr>
-<td title='test.TestNG.testEmptyFormSubmission()'><b>testEmptyFormSubmission</b><br>Test class: test.TestNG</td>
-<td></td>
-<td>43</td>
-<td>test.TestNG@20d525</td></tr>
+<td>72</td>
+<td>test.TestSIMGPage@37ceb1df</td></tr>
 </table><p>
 </body>
 </html>

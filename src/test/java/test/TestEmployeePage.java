@@ -128,13 +128,16 @@ public class TestEmployeePage {
 		employee.setProfession(0);
 		employee.setIndustryType(0);
 		
+		employee.setValueTerms("click");
+		employee.setValuesSubscribe("click");
+		
 		Thread.sleep(1000);
 		
 		employee.setSubmit();
 		
 		Thread.sleep(1000);
 		
-		Assert.assertTrue("Invalie mobile validation message does not display.", employee.isValidEmail());
+		Assert.assertTrue("Invalie mobile validation message does not display.", employee.isValidmobileNumber());
 	}
 	
 	//test upload file size
@@ -150,6 +153,9 @@ public class TestEmployeePage {
 		employee.setPlacementType(0);
 		
 		employee.setValueFile("C:\\Users\\QA CODEDESK\\eclipse-workspace\\MedfutureFramework\\support\\5-mb-example-file.pdf");
+		
+		employee.setValueTerms("click");
+		employee.setValuesSubscribe("click");
 		
 		//call the file size validation
 		Assert.assertTrue("File size has not been validated.", employee.isValidFileSize());
@@ -167,7 +173,6 @@ public class TestEmployeePage {
 		
 		employee.setIndustryType(0);
 		employee.setProfession(0);
-		employee.setIndustryType(0);
 		
 		Thread.sleep(2000);
 		
@@ -186,7 +191,7 @@ public class TestEmployeePage {
 		
 		employee.setIndustryType(0);
 		employee.setProfession(0);
-		employee.setIndustryType(0);
+		employee.setPlacementType(0);
 		
 		
 		employee.setValueTerms("click");

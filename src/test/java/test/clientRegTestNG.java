@@ -24,7 +24,7 @@ public class clientRegTestNG {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
-	private String url = "https://medfuture.co.nz/employer-register";
+	private String url = "https://medfuture.com.au/employer-register";
 	
 	@BeforeTest
 	public void setUp() {
@@ -246,14 +246,14 @@ public class clientRegTestNG {
 		ClientRegisterObject client = new ClientRegisterObject(driver, wait);
 		driver.get(url);
 		
-		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat815@gmail.com", "292569333", "Tes", "Test123//");
+		client.setValues("Test", "QA", "https://test.com", "Test", "QA", "manekaherat8151@gmail.com", "292569333", "Test123//", "Test123//");
 		
 		Thread.sleep(2000);
 		client.setValueIndustryType(0);
 		client.setValuehearUs(0);
 		client.setValueTerm("click");
 		client.setValueSubscribe("click");
-		client.setValueFile("");
+//		client.setValueFile("");
 		
 		//submit the form
 		client.setSubmit();

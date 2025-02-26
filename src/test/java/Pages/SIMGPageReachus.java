@@ -48,12 +48,18 @@ public class SIMGPageReachus {
 		lname = By.id("lastName");
 		mobile = By.id("phoneNumber");
 		email = By.id("email");
-		country = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]");
-		state = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]");
-		profession = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]");
-		specialty = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]");
-		seniority = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]");
-		registrationType = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[7]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]");
+		country = By.xpath("//input[@id='react-select-2-input']");
+		state = By.xpath("//input[@id='react-select-3-input']");
+		profession = By.xpath("//input[@id='react-select-4-input']");
+		specialty = By.xpath("//input[@id='react-select-5-input']");
+		seniority = By.xpath("//input[@id='react-select-6-input']");
+		registrationType = By.xpath("//input[@id='react-select-7-input']");
+//		country = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]");
+//		state = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]");
+//		profession = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]");
+//		specialty = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[6]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]");
+//		seniority = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]");
+//		registrationType = By.xpath("//body/div[@id='root']/section[8]/div[1]/div[1]/form[1]/div[1]/div[7]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]");
 		file = By.id("fileUpload");
 		terms = By.id("agree");
 		subscribe = By.id("subscribe");
@@ -72,7 +78,7 @@ public class SIMGPageReachus {
 	
 	//Country
 	public void setValueCountry(int option) {
-		System.out.println(option);
+		System.out.println("Select country foield");
 		driver.findElement(country).click();
 		System.out.println(option);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='react-select-2-option-"+option+"']"))).click();

@@ -1,115 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-30T09:29:38 IST" name="Default suite" finished-at="2024-12-30T09:36:59 IST" duration-ms="440836">
+  <suite started-at="2025-02-26T08:31:57 IST" name="Default suite" finished-at="2025-02-26T08:38:39 IST" duration-ms="402088">
     <groups>
     </groups>
-    <test started-at="2024-12-30T09:29:38 IST" name="Default test" finished-at="2024-12-30T09:36:59 IST" duration-ms="440836">
-      <class name="test.TestNG">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:29:38 IST" name="setUp" finished-at="2024-12-30T09:29:43 IST" duration-ms="4381" status="PASS">
+    <test started-at="2025-02-26T08:31:57 IST" name="Default test" finished-at="2025-02-26T08:38:39 IST" duration-ms="402088">
+      <class name="test.TestSIMGPage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:31:57 IST" name="setUp" finished-at="2025-02-26T08:32:01 IST" duration-ms="3394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="successfulFormSubmission()[pri:1, instance:test.TestNG@20d525]" started-at="2024-12-30T09:29:43 IST" name="successfulFormSubmission" finished-at="2024-12-30T09:30:33 IST" duration-ms="50713" status="PASS">
+        <test-method signature="testSuccessfulFormSubmission()[pri:1, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:32:01 IST" name="testSuccessfulFormSubmission" finished-at="2025-02-26T08:33:13 IST" duration-ms="72116" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- successfulFormSubmission -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:30:33 IST" name="AfterMethod" finished-at="2024-12-30T09:30:33 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method signature="testEmptyFormSubmission()[pri:2, instance:test.TestNG@20d525]" started-at="2024-12-30T09:30:33 IST" name="testEmptyFormSubmission" finished-at="2024-12-30T09:31:17 IST" duration-ms="43097" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testEmptyFormSubmission -->
-        <test-method signature="testAlreadyTakenUserRegistration()[pri:3, instance:test.TestNG@20d525]" started-at="2024-12-30T09:31:17 IST" name="testAlreadyTakenUserRegistration" finished-at="2024-12-30T09:32:04 IST" duration-ms="47580" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAlreadyTakenUserRegistration -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:31:17 IST" name="AfterMethod" finished-at="2024-12-30T09:31:17 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- testSuccessfulFormSubmission -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:33:13 IST" name="AfterMethod" finished-at="2025-02-26T08:33:13 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:04 IST" name="AfterMethod" finished-at="2024-12-30T09:32:04 IST" duration-ms="0" status="PASS">
+        <test-method signature="testemptyFormSubmission()[pri:2, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:33:13 IST" name="testemptyFormSubmission" finished-at="2025-02-26T08:33:44 IST" duration-ms="31216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testemptyFormSubmission -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:33:44 IST" name="AfterMethod" finished-at="2025-02-26T08:33:44 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method signature="tesPasswordLenghtError()[pri:4, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:04 IST" name="tesPasswordLenghtError" finished-at="2024-12-30T09:32:51 IST" duration-ms="46900" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tesPasswordLenghtError -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:51 IST" name="AfterMethod" finished-at="2024-12-30T09:32:51 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method signature="testPasswordMismatchErrorDisplayed()[pri:5, instance:test.TestNG@20d525]" started-at="2024-12-30T09:32:51 IST" name="testPasswordMismatchErrorDisplayed" finished-at="2024-12-30T09:33:40 IST" duration-ms="49061" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPasswordMismatchErrorDisplayed -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:33:40 IST" name="AfterMethod" finished-at="2024-12-30T09:33:40 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method signature="testValidEmail()[pri:6, instance:test.TestNG@20d525]" started-at="2024-12-30T09:33:40 IST" name="testValidEmail" finished-at="2024-12-30T09:34:29 IST" duration-ms="48647" status="PASS">
+        <test-method signature="testValidEmail()[pri:3, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:33:44 IST" name="testValidEmail" finished-at="2025-02-26T08:34:25 IST" duration-ms="40630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidEmail -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:34:29 IST" name="AfterMethod" finished-at="2024-12-30T09:34:29 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:34:25 IST" name="AfterMethod" finished-at="2025-02-26T08:34:25 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method signature="testValidFileSize()[pri:7, instance:test.TestNG@20d525]" started-at="2024-12-30T09:34:29 IST" name="testValidFileSize" finished-at="2024-12-30T09:35:16 IST" duration-ms="47009" status="PASS">
+        <test-method signature="testValidMobile()[pri:4, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:34:25 IST" name="testValidMobile" finished-at="2025-02-26T08:35:04 IST" duration-ms="39351" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidFileSize -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:35:16 IST" name="AfterMethod" finished-at="2024-12-30T09:35:16 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method signature="testRequiredfields()[pri:8, instance:test.TestNG@20d525]" started-at="2024-12-30T09:35:16 IST" name="testRequiredfields" finished-at="2024-12-30T09:36:03 IST" duration-ms="47275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRequiredfields -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:03 IST" name="AfterMethod" finished-at="2024-12-30T09:36:03 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- testValidMobile -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:35:04 IST" name="AfterMethod" finished-at="2025-02-26T08:35:04 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method signature="testRequiredCVField()[pri:9, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:03 IST" name="testRequiredCVField" finished-at="2024-12-30T09:36:09 IST" duration-ms="5612" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidArgumentException">
+        <test-method signature="testValidFileSize()[pri:5, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:35:04 IST" name="testValidFileSize" finished-at="2025-02-26T08:35:13 IST" duration-ms="9387" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[File not found: 
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [79812e47-71c0-47c2-be39-82eecda80d4d, sendKeysToElement {value=[Ljava.lang.CharSequence;@16f15ae9, id=50074b90-fd05-4fc8-bbe7-2129b503cad8}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:39564, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85324, moz:profile: C:\Users\QACODE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=desktop-..., se:cdp: ws://127.0.0.1:39564/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (79812e47-71c0-47c2-be39-82eecda80d4d)] -> id: fileUpload]
-Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d]]>
+              <![CDATA[Invalid file size does not detect. expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidArgumentException: File not found: 
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [79812e47-71c0-47c2-be39-82eecda80d4d, sendKeysToElement {value=[Ljava.lang.CharSequence;@16f15ae9, id=50074b90-fd05-4fc8-bbe7-2129b503cad8}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:39564, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 85324, moz:profile: C:\Users\QACODE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=desktop-..., se:cdp: ws://127.0.0.1:39564/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (79812e47-71c0-47c2-be39-82eecda80d4d)] -> id: fileUpload]
-Session ID: 79812e47-71c0-47c2-be39-82eecda80d4d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at Pages.CandidateRegisterObjecct.setValueFile(CandidateRegisterObjecct.java:138)
-at test.TestNG.testRequiredCVField(TestNG.java:299)
+              <![CDATA[java.lang.AssertionError: Invalid file size does not detect. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at test.TestSIMGPage.testValidFileSize(TestSIMGPage.java:194)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -138,27 +82,43 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRequiredCVField -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:09 IST" name="AfterMethod" finished-at="2024-12-30T09:36:09 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- testValidFileSize -->
+        <test-method signature="testRequiredFieldValidation()[pri:6, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:35:13 IST" name="testRequiredFieldValidation" finished-at="2025-02-26T08:36:21 IST" duration-ms="67250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRequiredFieldValidation -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:35:13 IST" name="AfterMethod" finished-at="2025-02-26T08:35:13 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method signature="testFileTypeValidation()[pri:10, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:09 IST" name="testFileTypeValidation" finished-at="2024-12-30T09:36:57 IST" duration-ms="47832" status="PASS">
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:36:21 IST" name="AfterMethod" finished-at="2025-02-26T08:36:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method signature="testCVFieldRequiredValidation()[pri:7, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:36:21 IST" name="testCVFieldRequiredValidation" finished-at="2025-02-26T08:37:28 IST" duration-ms="67653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCVFieldRequiredValidation -->
+        <test-method signature="testFileTypeValidation()[pri:8, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:37:28 IST" name="testFileTypeValidation" finished-at="2025-02-26T08:38:37 IST" duration-ms="68341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFileTypeValidation -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:57 IST" name="AfterMethod" finished-at="2024-12-30T09:36:57 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:37:28 IST" name="AfterMethod" finished-at="2025-02-26T08:37:28 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestNG@20d525]" started-at="2024-12-30T09:36:57 IST" name="tearDown" finished-at="2024-12-30T09:36:59 IST" duration-ms="2672" status="PASS">
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:38:37 IST" name="AfterMethod" finished-at="2025-02-26T08:38:37 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestSIMGPage@37ceb1df]" started-at="2025-02-26T08:38:37 IST" name="tearDown" finished-at="2025-02-26T08:38:39 IST" duration-ms="2703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.TestNG -->
+      </class> <!-- test.TestSIMGPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
