@@ -26,7 +26,7 @@ public class TestPremierDocProductPage {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static BrowserMobProxy proxy;
-	private String url = "https://medfuture.com.au/allied-health-professional";
+	private String url = "https://medfuture.com.au/premier-locum-doctor";
 	
 	@BeforeTest
 	public void setUp() {
