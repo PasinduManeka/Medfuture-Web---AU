@@ -57,7 +57,7 @@ public class PremierDocProductPageReachus {
 		file = By.id("fileUpload");
 		terms = By.id("agree");
 		subscribe = By.id("subscribe");
-		submit = By.className("form-register-gold-btn");
+		submit = By.className("form-register-silver-btn");
 		success = By.cssSelector("div.relative.bg-white.p-7.lg\\:p-10.rounded-lg.flex.flex-col.items-center.text-center");
 	}
 	
